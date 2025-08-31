@@ -19,3 +19,5 @@ if ( ! defined( 'PSB_PLUGIN_URL' ) ) {
 if ( ! defined( 'PSB_VERSION' ) ) {
 	define( 'PSB_VERSION', '1.0.0' );
 }
+
+register_block_type( __DIR__ . '/build/links' );
