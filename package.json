@@ -1,0 +1,23 @@
+{
+  "name": "personal-site-blocks",
+  "version": "1.0.0",
+  "description": "A collection of blocks for my personal site",
+  "homepage": "https://github.com/stephencottontail/personal-site-blocks#readme",
+  "bugs": {
+    "url": "https://github.com/stephencottontail/personal-site-blocks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephencottontail/personal-site-blocks.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Stephen Dickinson <stephencottontail@me.com>",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.22.0"
+  }
+}
