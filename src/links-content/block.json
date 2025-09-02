@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "psb/links-content",
+  "title": "Links Content",
+  "description": "Shows a collection of links",
+  "category": "text",
+  "icon": "external",
+  "version": "1.0.0",
+  "attributes": {
+    "link": {
+      "type": "string",
+      "default": ""
+    },
+    "note": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "editorScript": "file:./index.js",
+  "viewStyle": "",
+  "render": ""
+}

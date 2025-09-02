@@ -21,3 +21,4 @@ if ( ! defined( 'PSB_VERSION' ) ) {
 }
 
 register_block_type( __DIR__ . '/build/links' );
+register_block_type( __DIR__ . '/build/links-content' );
