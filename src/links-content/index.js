@@ -1,10 +1,9 @@
 import { registerBlockType } from '@wordpress/blocks';
 import metadata from './block.json';
+import Edit from './edit.js';
 
 registerBlockType( metadata, {
-	edit: () => {
-		return <p>Hello from the editor!</p>;
-	},
+	edit: Edit,
 	save: () => {
 		return null;
 	},
