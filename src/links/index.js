@@ -6,7 +6,7 @@ import Edit from './edit.js';
 registerBlockType( metadata.name, {
 	edit: Edit,
 	save: () => {
-		const { blockProps } = useBlockProps.save();
+		const blockProps = useBlockProps.save();
 
 		return (
 			<div { ...blockProps }>

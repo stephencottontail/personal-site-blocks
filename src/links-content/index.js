@@ -8,8 +8,8 @@ registerBlockType( metadata, {
 	save: ( props ) => {
 		const { attributes } = props;
 		const { link, note } = attributes;
-		const { blockProps } = useBlockProps.save();
-
+		const blockProps = useBlockProps.save();
+console.log('tits',blockProps)
 		return (
 			<div { ...blockProps }>
 				<p>{ link }</p>
