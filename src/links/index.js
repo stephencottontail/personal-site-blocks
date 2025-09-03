@@ -1,11 +1,10 @@
-import { registerBlockType } from "@wordpress/blocks";
-import metadata from "./block.json";
+import { registerBlockType } from '@wordpress/blocks';
+import metadata from './block.json';
+import Edit from './edit.js';
 
-registerBlockType(metadata.name, {
-  edit: () => {
-    return <p>Hello from the editor</p>;
-  },
-  save: () => {
-    return null;
-  },
-});
+registerBlockType( metadata.name, {
+	edit: Edit,
+	save: () => {
+		return null;
+	},
+} );

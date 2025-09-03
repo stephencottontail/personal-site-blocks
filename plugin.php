@@ -20,5 +20,7 @@ if ( ! defined( 'PSB_VERSION' ) ) {
 	define( 'PSB_VERSION', '1.0.0' );
 }
 
-register_block_type( __DIR__ . '/build/links' );
-register_block_type( __DIR__ . '/build/links-content' );
+add_action( 'init', function() {
+	register_block_type( PSB_PLUGIN_DIR . '/build/links' );
+	register_block_type( PSB_PLUGIN_DIR . '/build/links-content' );
+} );

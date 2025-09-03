@@ -4,6 +4,7 @@
   "name": "psb/links-content",
   "title": "Links Content",
   "description": "Shows a collection of links",
+  "parent": [ "psb/links" ],
   "category": "text",
   "icon": "external",
   "version": "1.0.0",

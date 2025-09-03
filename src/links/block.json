@@ -4,6 +4,7 @@
   "name": "psb/links",
   "title": "Links",
   "description": "Shows a collection of links",
+  "allowedBlocks": [ "psb/links-content" ],
   "category": "text",
   "icon": "external",
   "version": "1.0.0",
