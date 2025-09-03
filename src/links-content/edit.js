@@ -4,35 +4,42 @@ import {
 	useBlockProps,
 } from '@wordpress/block-editor';
 import { ToolbarButton } from '@wordpress/components';
+import { Icon, create } from '@wordpress/icons';
 
-const Edit = () => {
-	const props = useBlockProps();
+const Edit = ( props ) => {
+	const { attributes, setAttributes } = props;
+	const { link, note } = attributes;
+	const blockProps = useBlockProps();
 
 	return (
 		<>
 			<BlockControls group="other">
 				<ToolbarButton
-					label="Add link item"
+					label="Add New Link Item"
 					onClick={ () => console.log( 'hi' ) }
 				>
-					+
+					<Icon icon={ create } size={ 32 } />
 				</ToolbarButton>
 			</BlockControls>
-			<div { ...props }>
+			<div { ...blockProps }>
 				<RichText
 					tagName="p"
-					placeholder="Put a URL here!"
-					value=""
+					placeholder="URL"
+					value={ link }
+					identifier={ link }
+					disableLineBreaks={ true }
 					onChange={ ( value ) => {
-						console.log( value );
+						setAttributes( { link: value } );
 					} }
 				/>
 				<RichText
 					tagName="p"
-					placeholder="Optionally write a note!"
-					value=""
+					placeholder="Note (optional)"
+					value={ note }
+					identifier={ note }
+					disableLineBreaks={ true }
 					onChange={ ( value ) => {
-						console.log( value );
+						setAttributes( { note: value } );
 					} }
 				/>
 			</div>
@@ -41,5 +48,3 @@ const Edit = () => {
 };
 
 export default Edit;
-
-

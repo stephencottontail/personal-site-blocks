@@ -20,6 +20,7 @@
     "start": "npx wp-scripts start"
   },
   "devDependencies": {
+    "@wordpress/icons": "^10.29.0",
     "@wordpress/scripts": "^30.22.0"
   }
 }
