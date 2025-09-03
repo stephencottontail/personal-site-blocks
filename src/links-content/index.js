@@ -9,11 +9,12 @@ registerBlockType( metadata, {
 		const { attributes } = props;
 		const { link, note } = attributes;
 		const blockProps = useBlockProps.save();
-console.log('tits',blockProps)
+		const className = blockProps.className;
+
 		return (
 			<div { ...blockProps }>
-				<p>{ link }</p>
-				{ note && <p>{ note }</p> }
+				<p className={ `${ className }__link` }>{ link }</p>
+				{ note && <p className={ `${ className }__note` }>{ note }</p> }
 			</div>
 		);
 	},
