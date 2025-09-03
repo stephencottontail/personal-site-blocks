@@ -1,10 +1,20 @@
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import { registerBlockType } from '@wordpress/blocks';
 import metadata from './block.json';
 import Edit from './edit.js';
 
 registerBlockType( metadata, {
 	edit: Edit,
-	save: () => {
-		return null;
+	save: ( props ) => {
+		const { attributes } = props;
+		const { link, note } = attributes;
+		const { blockProps } = useBlockProps.save();
+
+		return (
+			<div { ...blockProps }>
+				<p>{ link }</p>
+				<p>{ note }</p>
+			</div>
+		);
 	},
 } );
