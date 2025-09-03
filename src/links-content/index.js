@@ -13,7 +13,7 @@ registerBlockType( metadata, {
 		return (
 			<div { ...blockProps }>
 				<p>{ link }</p>
-				<p>{ note }</p>
+				{ note && <p>{ note }</p> }
 			</div>
 		);
 	},
