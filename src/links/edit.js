@@ -10,8 +10,7 @@ import { useDispatch } from '@wordpress/data';
 import { Icon, create } from '@wordpress/icons';
 
 const Edit = ( props ) => {
-	const { attributes, clientId } = props;
-	const { links } = attributes;
+	const { clientId } = props;
 	const blockProps = useBlockProps();
 	const { insertBlock } = useDispatch( blockEditorStore );
 	const LINKS_BLOCK_NAME = 'psb/links-content';
