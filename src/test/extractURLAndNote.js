@@ -1,13 +1,21 @@
 import extractURLAndNote from '../utils/extractURLAndNote.js';
 
-test( 'Extract URL and an optional note from a block', () => {
-	const content =
-		'<a href="https://www.apple.com/">https://www.apple.com/</a> (Apple)';
-	const got = extractURLAndNote( content );
-	const want = {
-		link: 'https://www.apple.com/',
-		note: 'Apple',
-	};
+const testCases = [
+	{
+		content:
+			'<a href="https://www.apple.com/">https://www.apple.com/</a> (Apple)',
+		want: { link: 'https://www.apple.com/', note: 'Apple' },
+	},
+	{
+		content:
+			'<a href="https://www.google.com/">https://www.google.com/</a>',
+		want: { link: 'https://www.google.com/', note: null },
+	},
+];
 
-	expect( got ).toEqual( want );
-} );
+test.each( testCases )(
+	'.extractURLAndNote($content)',
+	( { content, want } ) => {
+		expect( extractURLAndNote( content ) ).toEqual( want );
+	}
+);
