@@ -3,8 +3,8 @@ const extractURLAndNote = ( content ) => {
 	const matches = regexp.exec( content );
 
 	return {
-		link: matches[1],
-		note: matches[2] || null
+		link: matches[ 1 ],
+		note: matches[ 2 ] || null,
 	};
 };
 
