@@ -2,6 +2,7 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import { registerBlockType } from '@wordpress/blocks';
 import metadata from './block.json';
 import Edit from './edit.js';
+import transforms from './transforms.js';
 
 registerBlockType( metadata.name, {
 	edit: Edit,
@@ -14,4 +15,5 @@ registerBlockType( metadata.name, {
 			</div>
 		);
 	},
+	transforms,
 } );
