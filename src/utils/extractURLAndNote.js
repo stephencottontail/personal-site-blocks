@@ -1,5 +1,5 @@
 const extractURLAndNote = ( content ) => {
-	const regexp = /<a.*>(.+)<\/a.*>(?: .*\(([^)]*)\))?/g;
+	const regexp = /<li.*><a.*>(.+)<\/a.*>(?: .*\(([^)]*)\))?<\/li>/g;
 	const matches = regexp.exec( content );
 
 	return {
