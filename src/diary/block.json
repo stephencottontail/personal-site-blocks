@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "psb/diary",
+  "title": "Diary",
+  "description": "A container block with a date",
+  "category": "text",
+  "icon": "calendar-alt",
+  "version": "1.0.0",
+  "editorScript": "file:./index.js"
+}
+

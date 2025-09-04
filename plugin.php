@@ -23,4 +23,5 @@ if ( ! defined( 'PSB_VERSION' ) ) {
 add_action( 'init', function() {
 	register_block_type( PSB_PLUGIN_DIR . '/build/links' );
 	register_block_type( PSB_PLUGIN_DIR . '/build/links-content' );
+	register_block_type( PSB_PLUGIN_DIR . '/build/diary' );
 } );
