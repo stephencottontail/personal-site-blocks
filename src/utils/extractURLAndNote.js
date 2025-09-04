@@ -1,7 +1,10 @@
 const extractURLAndNote = ( content ) => {
+	const regexp = /<a.*>(.+)<\/a.*>.*\(([^)]*)\)/d;
+	const matches = regexp.exec( content );
+
 	return {
-		link: 'https://www.apple.com/',
-		note: 'Apple',
+		link: matches[1],
+		note: matches[2] || null
 	};
 };
 
