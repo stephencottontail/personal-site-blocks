@@ -4,6 +4,20 @@
   "name": "psb/diary",
   "title": "Diary",
   "description": "A container block with a date",
+  "allowedBlocks": [
+    "core/paragraph",
+    "core/list",
+    "core/list-item",
+    "core/image",
+    "psb/links",
+    "psb/links-content"
+  ],
+  "attributes": {
+    "date": {
+      "type": "string",
+      "default": ""
+    }
+  },
   "category": "text",
   "icon": "calendar-alt",
   "version": "1.0.0",
