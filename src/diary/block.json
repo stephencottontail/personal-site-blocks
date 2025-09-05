@@ -14,7 +14,7 @@
   ],
   "attributes": {
     "date": {
-      "type": "string",
+      "type": "number",
       "default": ""
     }
   },
