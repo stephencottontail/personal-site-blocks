@@ -1,21 +1,11 @@
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
 import { useEffect } from '@wordpress/element';
-
+import formatDateForDisplay from '../utils/formatDateForDisplay.js';
 const Edit = ( props ) => {
 	const { attributes, setAttributes, clientId } = props;
 	const { date } = attributes;
 	const blockProps = useBlockProps();
-	const formatDateForDisplay = ( date ) => {
-		const dateObject = new Date( date );
-		const options = {
-			weekday: 'long',
-			year: 'numeric',
-			month: 'long',
-			day: 'numeric',
-		};
-		return dateObject.toLocaleDateString( 'en-US', options );
-	};
 
 	const innerBlockCount = useSelect(
 		( select ) => {
