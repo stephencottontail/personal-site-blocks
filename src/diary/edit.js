@@ -40,7 +40,6 @@ const Edit = ( props ) => {
 					'core/paragraph',
 					{ placeholder: 'Lorem ipsum' },
 				] }
-				directInsert
 			/>
 		</div>
 	);
